@@ -43,12 +43,42 @@ window.ChefPages = (function () {
   function renderHome() {
     var featuresRoot = document.getElementById("home-features");
     var quickRoot = document.getElementById("home-quick-links");
+    var statsRoot = document.getElementById("home-stats");
+    var philosophyRoot = document.getElementById("home-philosophy");
 
     function draw() {
       if (featuresRoot) {
         featuresRoot.innerHTML = (window.ChefI18n.get("home.features") || [])
           .map(function (feature) {
             return "<li>" + esc(feature) + "</li>";
+          })
+          .join("");
+      }
+      if (statsRoot) {
+        statsRoot.innerHTML = (window.ChefI18n.get("home.stats") || [])
+          .map(function (stat) {
+            return (
+              '<div class="stat"><span class="stat-value">' +
+              esc(stat.value) +
+              '</span><span class="stat-label">' +
+              esc(stat.label) +
+              "</span></div>"
+            );
+          })
+          .join("");
+      }
+      if (philosophyRoot) {
+        philosophyRoot.innerHTML = (window.ChefI18n.get("home.philosophy") || [])
+          .map(function (item) {
+            return (
+              '<article class="value-card"><span class="value-icon">' +
+              esc(item.icon) +
+              "</span><h3>" +
+              esc(item.title) +
+              "</h3><p>" +
+              esc(item.text) +
+              "</p></article>"
+            );
           })
           .join("");
       }
