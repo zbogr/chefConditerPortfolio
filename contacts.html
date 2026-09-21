@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg" />
+    <title>Контакти — Chef Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+  </head>
+  <body data-page="contacts">
+    <header id="site-header" class="site-header"></header>
+
+    <main class="section">
+      <div class="container">
+        <div class="page-header">
+          <h1 data-i18n="contacts.title"></h1>
+          <p data-i18n="contacts.subtitle"></p>
+        </div>
+
+        <div class="contacts-layout">
+          <div>
+            <h2 data-i18n="contacts.contactsHeading"></h2>
+            <ul class="contact-list" id="contact-list"></ul>
+            <h2 data-i18n="contacts.socialsHeading"></h2>
+            <ul class="social-list" id="social-list"></ul>
+          </div>
+
+          <div class="form-card">
+            <h2 data-i18n="contacts.formTitle"></h2>
+            <form id="contact-form" novalidate>
+              <div class="field" data-field="name">
+                <label for="name" data-i18n="contacts.name"></label>
+                <input id="name" name="name" type="text" autocomplete="name" data-i18n-attr="placeholder:contacts.namePlaceholder" />
+                <span class="error-text" data-error="name"></span>
+              </div>
+              <div class="field" data-field="email">
+                <label for="email" data-i18n="contacts.email"></label>
+                <input id="email" name="email" type="email" autocomplete="email" data-i18n-attr="placeholder:contacts.emailPlaceholder" />
+                <span class="error-text" data-error="email"></span>
+              </div>
+              <div class="field" data-field="message">
+                <label for="message" data-i18n="contacts.message"></label>
+                <textarea id="message" name="message" data-i18n-attr="placeholder:contacts.messagePlaceholder"></textarea>
+                <span class="error-text" data-error="message"></span>
+              </div>
+              <button class="btn btn-primary" type="submit" data-i18n="contacts.submit"></button>
+              <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="site-footer" class="site-footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/pages.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

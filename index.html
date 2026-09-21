@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg" />
+    <title>Chef Portfolio — Шеф-кондитер</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+  </head>
+  <body data-page="home">
+    <header id="site-header" class="site-header"></header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div>
+            <h1 class="hero-title" data-i18n="home.heroTitle"></h1>
+            <p class="hero-subtitle" data-i18n="home.heroSubtitle"></p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="categories.html" data-i18n="home.heroCta"></a>
+              <a class="btn btn-outline" href="contacts.html" data-i18n="home.heroCtaSecondary"></a>
+            </div>
+          </div>
+          <div class="hero-visual">🎂</div>
+        </div>
+      </section>
+
+      <section class="quote">
+        <div class="container">
+          <blockquote data-i18n="home.quote"></blockquote>
+          <cite data-i18n="home.quoteAuthor"></cite>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 data-i18n="home.aboutTitle"></h2>
+          <p class="about-text" data-i18n="home.aboutText"></p>
+          <ul class="feature-list" id="home-features"></ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 data-i18n="home.quickTitle"></h2>
+          <div class="quick-links" id="home-quick-links"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="site-footer" class="site-footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/pages.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
