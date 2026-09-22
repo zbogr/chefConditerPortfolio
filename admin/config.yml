@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: master   # або main, залежно від вашої гілки
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "dishes"
+    label: "Страви"
+    folder: "content/dishes"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Назва", name: "title", widget: "string" }
+      - { label: "Опис", name: "description", widget: "text" }
+      - { label: "Ціна", name: "price", widget: "string" }
+      - { label: "Фото", name: "image", widget: "image" }
