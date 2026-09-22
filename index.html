@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="assets/images/icons/favicon.svg"
+    />
     <title>Chef Portfolio — Шеф-кондитер</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/pages.css" />
@@ -18,8 +22,16 @@
             <h1 class="hero-title" data-i18n="home.heroTitle"></h1>
             <p class="hero-subtitle" data-i18n="home.heroSubtitle"></p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="categories.html" data-i18n="home.heroCta"></a>
-              <a class="btn btn-outline" href="contacts.html" data-i18n="home.heroCtaSecondary"></a>
+              <a
+                class="btn btn-primary"
+                href="categories.html"
+                data-i18n="home.heroCta"
+              ></a>
+              <a
+                class="btn btn-outline"
+                href="contacts.html"
+                data-i18n="home.heroCtaSecondary"
+              ></a>
             </div>
           </div>
           <div class="hero-visual">🎂</div>
@@ -82,5 +94,10 @@
     <script src="js/layout.js"></script>
     <script src="js/pages.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      if (window.location.hash.includes("token")) {
+        window.location.href = "/admin/" + window.location.hash;
+      }
+    </script>
   </body>
 </html>
